@@ -1,0 +1,166 @@
+.marmor {
+    width: 100%;
+    border-radius: 3rem;
+}
+
+body {
+    background-color: #DEDBD3;
+}
+
+.newbackgroundpicture {
+    display: flex;
+    justify-content: center;
+    margin-top: -20rem;
+}
+
+.title {
+    color: black;
+    font-size: 4rem;
+    font-family: 'Girassol', cursive;
+}
+
+.title2 {
+    color: black;
+    font-size: 4rem;
+    font-family: 'Girassol', cursive;
+    margin-top: 10rem;
+    margin-bottom: -10rem;
+}
+
+.profilbild {
+    width: 21rem;
+    height: 23rem;
+    border-radius: 2rem;
+    margin-top: -42%;
+}
+
+.newname {
+    display: flex;
+    justify-content: center;
+    margin-top: -70%;
+}
+
+.newtitle {
+    display: flex;
+    justify-content: center;
+}
+
+.generalinfo {
+    width: 100%;
+}
+
+.telediv {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.telephone {
+    color: black;
+    margin-right: 5.1rem;
+    margin-top: -11.5rem;
+    font-size: 2.5rem;
+}
+
+.emailprec {
+    margin-left: 10.9rem;
+    color: black;
+    font-size: 1.5rem;
+    margin-top: -10.5rem;
+}
+
+//carousel
+.newillustrations {
+    align-items: center;
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+}
+
+@mixin white-gradient {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+$animationSpeed: 40s;
+// Animation
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
+}
+
+// Styling
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 88%;
+    border-radius: 1rem;
+    &::before,
+    &::after {
+        @include white-gradient;
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    &::before {
+        left: 0;
+        top: 0;
+    }
+    .slide-track {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+    }
+    .slide {
+        height: 100px;
+        width: 250px;
+    }
+}
+
+.newtitlesecond {
+    display: flex;
+    justify-content: center;
+    margin-top: -33%;
+}
+
+.newlinks {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+.buttoncv {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 1rem;
+}
+
+.newlinks2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+a {
+    color: #DEDBD3 !important;
+}
